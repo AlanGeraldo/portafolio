@@ -1,0 +1,608 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #fff;
+}
+
+.header-container {
+  background: #1e2326;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.header-container header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.header-container header .logo a {
+    font-size: 36px;
+    color: #1cb698;
+}
+
+.header-container header ul {
+    display: flex;
+    list-style: none;
+}
+
+.header-container header nav ul li a {
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+}
+
+.header-container header nav ul li a:hover {
+    color: #1cb698;
+}
+
+.menu-responsive {
+    background-color: #1cb698;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url(/images/bg-img.png);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.home .banner-container {
+    padding: 20px;
+    max-width: 330px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+    background-color: #1e2326;
+}
+
+.home .banner-container img {
+    margin-top: 40px;
+    border: 6px solid #1cb698;
+    display: block;
+    width: 60%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.home .banner-container h1 {
+    margin-top: 20px;
+    font-size: 35px;
+
+}
+
+.home .banner-container h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.home .banner-container .social a {
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 25px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.home .banner-container .social a:hover {
+    background-color: #1cb698;
+    color: #1e2326;
+} 
+
+.about {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.about .container-about {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.about .container-about p {
+    line-height: 22px;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.about .container-about p span {
+    color: #1cb698;
+    font-weight: bold;
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .column {
+    width: 50%;
+}
+
+.about .row .column h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about .row .column ul {
+    list-style: none;
+}
+
+.about .row .column ul li {
+    margin: 12px 0;
+}
+
+.about .row .column ul li strong {
+    display: inline-block;
+    color: #1cb698;
+    width: 70px;
+}
+
+.about .row .column .hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.about .row .column .hobbies-container .hobbie {
+    width: 100px;
+    height: 100px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.about .row .column .hobbies-container .hobbie:hover {
+    background-color: #1cb698;
+}
+
+.about .row .column .hobbies-container .hobbie i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.skills {
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.skills .container-skills{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills h2 {
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.skills .row {
+    display: flex;
+}
+
+.skills .row .column {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.skills .row .column h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.skills .skill > span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills .skill .skill-bar {
+    height: 8px; 
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.skills .skill .progress {
+    background-color: #1cb698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+
+.skills .skill .progress span {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1cb698;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+
+.skills .skill .javascript {
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+
+@keyframes javascript {
+    0%{width:0%}
+    100%{width:57%;}
+}
+
+.skills .skill .htmlcss {
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+
+@keyframes htmlcss {
+    0%{width:0%}
+    100%{width:84%;}
+}
+
+.skills .skill .react {
+    width: 0%;
+    animation: 2s react forwards;
+}
+
+@keyframes react {
+    0%{width:0%}
+    100%{width:63%;}
+}
+
+.skills .skill .tailwind {
+    width: 0%;
+    animation: 2s tailwind forwards;
+}
+
+@keyframes tailwind {
+    0%{width:0%}
+    100%{width:59%;}
+}
+
+.skills .skill .communication {
+    width: 0%;
+    animation: 2s communication forwards;
+}
+
+@keyframes communication {
+    0%{width:0%}
+    100%{width:86%;}
+}
+
+.skills .skill .teamwork {
+    width: 0%;
+    animation: 2s teamwork forwards;
+}
+
+@keyframes teamwork {
+    0%{width:0%}
+    100%{width:72%;}
+}
+
+.skills .skill .dedication {
+    width: 0%;
+    animation: 2s dedication forwards;
+}
+
+@keyframes dedication {
+    0%{width:0%}
+    100%{width:82%;}
+}
+
+.skills .skill .creativity {
+    width: 0%;
+    animation: 2s creativity forwards;
+}
+
+@keyframes creativity {
+    0%{width:0%}
+    100%{width:68%;}
+}
+
+.projects {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.projects .projects-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.projects h2 {
+    font-size: 48px;
+    text-align: center;
+    padding: 28 0;
+    margin-bottom: 10px;
+}
+
+.projects .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.projects .gallery .project {
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+}
+
+.projects .gallery .project img {
+    width: 100%;
+    display: block;
+}
+
+.projects .gallery .project .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28, 182, 152, .8), rgba(28, 182, 152, .8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 1;
+}
+
+.projects .gallery .project .overlay h3 {
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.projects .gallery .project .overlay:hover {
+    opacity: 0;
+}
+
+.projects .gallery .project .overlay:hover h3 {
+    margin-bottom: 8px;
+}
+
+.contact {
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.contact .contact-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: 48px;
+    text-align: center;
+padding: 20px;
+}
+
+.contact .row {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .column {
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+.contact .column input, .contact .column textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #1e2326;
+    color: #fff;
+    font-size: 18px;
+}
+
+.contact button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.contact button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1cb698;
+    z-index: -1;
+    transition: 1s;
+}
+
+.contact button:hover .overlay {
+    width: 100%;
+}
+
+footer {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 58px 0 38px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .social {
+    margin-bottom: 20px;
+}
+
+footer .social a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+footer .social a:hover {
+    background-color: #1cb698;
+    color: #1e2326;
+    transition: .5s;
+}
+
+footer .up {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1cb698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+@media screen and (max-width:980px) {
+    nav {
+        display: none;
+    }
+    .menu-responsive {
+        display: block;
+    }
+    nav.responsive {
+        display: block;
+        position:absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252a2e;
+        width: 180px;
+    }
+
+    nav.responsive ul {
+        display: block;
+    }
+
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:700px) {
+
+    .about .row {
+        display: block;
+    }
+
+    .about .row .column {
+        width: fit-content;
+    }
+
+    .skills .row {
+        display: block;
+    }
+
+    .skills .row .column {
+        width: 100%;
+    }
+
+    .skills .row .column .skill-bar {
+        width: 100%;
+    }
+
+    .projects .gallery {
+       display: block;
+       width: 100%; 
+    }
+
+    .projects .gallery .project {
+        max-width: 100%;
+    }
+
+    .projects .gallery .project img {
+        width: 100%;
+    }
+
+    .contact .row {
+        display: block;
+    }
+
+    .contact .row .column {
+        width: 100%;
+    }
+    
+}
+
+
+
+
+
+
