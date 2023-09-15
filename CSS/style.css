@@ -14,6 +14,7 @@ a {
     color: #fff;
 }
 
+
 .header-container {
   background: #1e2326;
   position: fixed;
@@ -202,6 +203,35 @@ a {
     margin-bottom: 10px;
 }
 
+.about button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.about button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1cb698;
+    z-index: -1;
+    transition: 1s;
+}
+
+.about button:hover .overlay {
+    width: 100%;
+}
+
 .skills {
     background-color: #252a2e;
     color: #fff;
@@ -253,99 +283,24 @@ a {
     top: 0;
     left: 0;
     height: 8px;
+    width: 100%;
 }
 
 .skills .skill .progress span {
     position: absolute;
-    height: 40px;
-    width: 40px;
+    height: 55px;
+    width: 55px;
     background-color: #1cb698;
     border-radius: 50px;
-    line-height: 40px;
+    line-height: 65px;
     text-align: center;
-    top: -17px;
+    top: -24px;
     right: -15px;
     font-size: 14px;
 }
 
-.skills .skill .javascript {
-    width: 0%;
-    animation: 2s javascript forwards;
-}
-
-@keyframes javascript {
-    0%{width:0%}
-    100%{width:57%;}
-}
-
-.skills .skill .htmlcss {
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-
-@keyframes htmlcss {
-    0%{width:0%}
-    100%{width:84%;}
-}
-
-.skills .skill .react {
-    width: 0%;
-    animation: 2s react forwards;
-}
-
-@keyframes react {
-    0%{width:0%}
-    100%{width:63%;}
-}
-
-.skills .skill .tailwind {
-    width: 0%;
-    animation: 2s tailwind forwards;
-}
-
-@keyframes tailwind {
-    0%{width:0%}
-    100%{width:59%;}
-}
-
-.skills .skill .communication {
-    width: 0%;
-    animation: 2s communication forwards;
-}
-
-@keyframes communication {
-    0%{width:0%}
-    100%{width:86%;}
-}
-
-.skills .skill .teamwork {
-    width: 0%;
-    animation: 2s teamwork forwards;
-}
-
-@keyframes teamwork {
-    0%{width:0%}
-    100%{width:72%;}
-}
-
-.skills .skill .dedication {
-    width: 0%;
-    animation: 2s dedication forwards;
-}
-
-@keyframes dedication {
-    0%{width:0%}
-    100%{width:82%;}
-}
-
-.skills .skill .creativity {
-    width: 0%;
-    animation: 2s creativity forwards;
-}
-
-@keyframes creativity {
-    0%{width:0%}
-    100%{width:68%;}
+.skills .skill .progress span i {
+    font-size: 30px;
 }
 
 .projects {
